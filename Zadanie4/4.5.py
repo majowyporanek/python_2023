@@ -2,10 +2,10 @@
 # Napisać funkcję odwracanie(L, left, right) odwracającą kolejność elementów na liście od numeru left do right włącznie.
 # Lista jest modyfikowana w miejscu (in place). Rozważyć wersję iteracyjną i rekurencyjną.
 
-# wersja iteracyjne
+# wersja iteracyjna
 def odwracanie(L, left, right):
     if left < 0 or right >= len(L) or left >= right:
-        raise ValueError("Invalid indices for reversal")
+        raise ValueError("Niepoprawne indeksy")
 
     while left < right:
         L[left], L[right] = L[right], L[left]
