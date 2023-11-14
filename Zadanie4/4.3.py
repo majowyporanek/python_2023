@@ -11,3 +11,6 @@ def factorial(n):
         result *= i
     return result
 
+#
+# print(math.factorial(10))  # Python 2.6+
+# print(factorial(10))
