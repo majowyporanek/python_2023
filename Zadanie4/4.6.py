@@ -12,9 +12,6 @@ def sum_seq(sekwencja):
 
     return lista
 
-
 # sekwencja = [1, (2, 3), [], [4, (5, 6, 7)], 8, [9]]
-#
 # lista_wynik = sum_seq(sekwencja)
-#
 # print(sum(lista_wynik))
