@@ -1,0 +1,48 @@
+from prefix_tree import PrefixTree
+from linked_list import LinkedList
+
+class SlownikT9:
+    def __init__(self, filepath):
+        self.words_store = PrefixTree()
+        self.nums_to_letters = {
+            2: "abc", 3: "def", 4: "ghi", 5: "jkl",
+            6: "mno", 7: "pqrs", 8: "tuv", 9: "wxyz"
+        }
+        self.filepath = filepath
+        self.read_words(filepath)
+        self.wordstore = []
+
+    def read_words(self, filepath):
+        try:
+            with open(filepath, 'r') as file:
+                for line in file:
+                    self.words_store.insert(line.strip())
+        except IOError:
+            print("Error with opening a file with words!")
+
+    def find_words_by_prefix(self, prefix):
+        return self.words_store.search(prefix)
+
+    def search_words_by_numbers(self, numbers, length, prefix, result=None):
+        if result is None:
+            result = LinkedList()
+
+        if length == 0:
+            for word in self.find_words_by_prefix(prefix):
+                result.push_back(word)
+            return result
+
+        letters = self.nums_to_letters.get(numbers[0], "")
+
+        for letter in letters:
+            new_prefix = prefix + letter
+            self.search_words_by_numbers(numbers[1:], length - 1, new_prefix, result)
+
+        return result
+
+    def get_words(self, numbers):
+        self.wordstore.clear()
+        results = self.search_words_by_numbers(numbers, len(numbers), "")
+        for word in results:
+            self.wordstore.append(word)
+        return self.wordstore
