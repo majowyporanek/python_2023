@@ -66,10 +66,10 @@ class DictionaryT9:
 
 def display_phone_keypad():
     keypad = [
-        "|1      | 2 abc | 3 def",
-        "|4 ghi  | 5 jkl | 6 mno",
-        "|7 pqrs | 8 tuv | 9 wxyz",
-        "|*      | 0     | #"
+           "| 1      | 2 abc | 3 def |",
+           "| 4 ghi  | 5 jkl | 6 mno |",
+           "| 7 pqrs | 8 tuv | 9 wxyz|",
+           "| *      | 0     | #     |"
     ]
     for line in keypad:
         print(line)
@@ -79,10 +79,13 @@ def t9_text_interface(dictionary):
     sentence = []
 
     while True:
+        print('\n')
         display_phone_keypad()
+        print('\n')
         input_string = input("Enter number sequence (or 'exit' to quit): ").lower()
 
         if input_string == 'exit':
+            print("Final Sentence:", ' '.join(sentence))
             break
 
         if input_string == 'ok':
@@ -109,7 +112,7 @@ def t9_text_interface(dictionary):
 
                 if choice == 'ok':
                     sentence.append(words[word_index])
-                    print("Current Sentence:", ' '.join(sentence))
+                    print("\nCurrent Sentence:", ' '.join(sentence))
                     break
                 elif choice == 'new':
                     break
