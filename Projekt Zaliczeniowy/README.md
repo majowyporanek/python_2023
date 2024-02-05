@@ -70,10 +70,10 @@ Interfejs tekstowy dla słownika T9.
 ## Instrukcje Uruchomienia
 1. Upewnij się, że masz zainstalowanego Pythona.
 2. Uruchom `t9_dictionary.py` w terminalu.
-   **Uruchomienie Skryptu**:
-   - Otwórz terminal lub wiersz poleceń.
-   - Przejdź do katalogu, w którym znajduje się skrypt `t9_dictionary.py`.
-   - Uruchom skrypt, wpisując `python t9_dictionary.py` i naciskając Enter.
+   - **Uruchomienie Skryptu**:
+      - Otwórz terminal lub wiersz poleceń.
+      - Przejdź do katalogu, w którym znajduje się skrypt `t9_dictionary.py`.
+      - Uruchom skrypt, wpisując `python t9_dictionary.py` i naciskając Enter.
 
 3. **Interakcja z Programem**:
    - Po uruchomieniu skryptu, zobaczysz interfejs konsolowy.
