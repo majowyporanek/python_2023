@@ -1,7 +1,7 @@
 # Słownik T9 - Program Konsolowy
 
 ## Opis Projektu
-Program konsolowy wykorzystujący słownik T9 do wyszukiwania wyrazów. Umożliwia użytkownikowi wprowadzenie sekwencji cyfr, a następnie przeszukuje i wyświetla pasujące słowa zgodnie z logiką klawiatury T9.
+Program konsolowy wykorzystujący słownik T9 do wyszukiwania wyrazów w języku angielskim. Umożliwia użytkownikowi wprowadzenie sekwencji cyfr, a następnie przeszukuje i wyświetla pasujące słowa zgodnie z logiką klawiatury T9.
 
 ## Składniki Projektu
 
@@ -38,7 +38,7 @@ Reprezentuje drzewo prefiksowe używane do przechowywania i wyszukiwania słów.
 
 ### Moduł: `t9_dictionary.py`
 
-#### Funkcja: `load_words_from_json(filepath)`
+#### Funkcja: `load_words(filepath)`
 Ładuje słowa z pliku.
 - `filepath`: Ścieżka do ze słowami. Plik użyty w projekcie: [słowa](https://www.mit.edu/~ecprice/wordlist.10000)
 
@@ -67,15 +67,30 @@ Wyświetla reprezentację klawiatury telefonu na ekranie.
 Interfejs tekstowy dla słownika T9.
 - `dictionary`: Instancja słownika T9.
 
+## Przykład użycia programu
+docelowy zwrot: "hello world" 
+1. Użytkownik jest proszony o wpisanie wybranej sekwencji cyfr
+   ![1](https://github.com/majowyporanek/python_2023/assets/80955254/98b436d6-2e02-4436-9955-c83b1cb07d64)
+2. Użytkownik widzi pierwszą sugestię na podstawie wpisanego znaku. Aby zobaczyć kolejne sugestie wciska "Enter". Jeżeli sugestia jest trafna - wpisuje "ok". Jeśli chce wpisać nową sekwencje cyfr wpisuje "new".
+   ![2](https://github.com/majowyporanek/python_2023/assets/80955254/201a1978-1d25-4978-8cee-9c5f4f45a3ff)
+3. Pierwsza sugestia jest trafna. Użytkownik przechodzi do wpisania następnej sekwencji znaków (ilość cyfr != docelowej długości słowa).
+   ![image](https://github.com/majowyporanek/python_2023/assets/80955254/20796bb2-4ce3-4996-b0c4-e5869b94d8ad)
+4. Użytkownik ma na myśli "world" - pierwsza sugestia nie jest trafna. Naciska 'Enter' aby wyświetlić pozostałe sugestie.
+   ![3](https://github.com/majowyporanek/python_2023/assets/80955254/de16f97a-a23c-4292-9563-32ad98376916)
+5. Użytkownik akceptuje sugestię "world" a następnie wpisuje "exit" w celu zakończenia działania programu.
+   ![4](https://github.com/majowyporanek/python_2023/assets/80955254/999fd34c-6819-4078-bcd7-2ba6ff292cc7)
+
 ## Instrukcje Uruchomienia
 1. Upewnij się, że masz zainstalowanego Pythona.
-2. Uruchom `t9_dictionary.py` w terminalu.
-   - **Uruchomienie Skryptu**:
+2. Sklonuj repozytorium:
       - Otwórz terminal lub wiersz poleceń.
-      - Przejdź do katalogu, w którym znajduje się skrypt `t9_dictionary.py`.
+      -`git clone [URL_REPOZYTORIUM]`
+      - Przejdź do katalogu projektu: `cd [NAZWA_KATALOGU]`
+4. Uruchom `t9_dictionary.py` w terminalu.
+   - **Uruchomienie Skryptu**:
       - Uruchom skrypt, wpisując `python t9_dictionary.py` i naciskając Enter.
 
-3. **Interakcja z Programem**:
+5. **Interakcja z Programem**:
    - Po uruchomieniu skryptu, zobaczysz interfejs konsolowy.
    - Postępuj zgodnie z instrukcjami na ekranie, aby wprowadzać sekwencje cyfr i wyszukiwać odpowiadające im słowa.
 
