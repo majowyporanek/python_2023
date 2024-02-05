@@ -79,6 +79,6 @@ Interfejs tekstowy dla słownika T9.
    - Po uruchomieniu skryptu, zobaczysz interfejs konsolowy.
    - Postępuj zgodnie z instrukcjami na ekranie, aby wprowadzać sekwencje cyfr i wyszukiwać odpowiadające im słowa.
 
-#### Technologie
+## Technologie
    - Python
 
