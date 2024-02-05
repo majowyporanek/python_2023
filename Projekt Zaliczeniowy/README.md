@@ -80,5 +80,5 @@ Interfejs tekstowy dla słownika T9.
    - Postępuj zgodnie z instrukcjami na ekranie, aby wprowadzać sekwencje cyfr i wyszukiwać odpowiadające im słowa.
 
 #### Technologie
-Python
+   - Python
 
