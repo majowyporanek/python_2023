@@ -69,13 +69,15 @@ Interfejs tekstowy dla słownika T9.
 
 ## Instrukcje Uruchomienia
 1. Upewnij się, że masz zainstalowanego Pythona.
-2. Uruchom `t9_dictionary.py` w terminalu.
-   - **Uruchomienie Skryptu**:
+2. Sklonuj repozytorium:
       - Otwórz terminal lub wiersz poleceń.
-      - Przejdź do katalogu, w którym znajduje się skrypt `t9_dictionary.py`.
+      -`git clone [URL_REPOZYTORIUM]`
+      - Przejdź do katalogu projektu: `cd [NAZWA_KATALOGU]`
+4. Uruchom `t9_dictionary.py` w terminalu.
+   - **Uruchomienie Skryptu**:
       - Uruchom skrypt, wpisując `python t9_dictionary.py` i naciskając Enter.
 
-3. **Interakcja z Programem**:
+5. **Interakcja z Programem**:
    - Po uruchomieniu skryptu, zobaczysz interfejs konsolowy.
    - Postępuj zgodnie z instrukcjami na ekranie, aby wprowadzać sekwencje cyfr i wyszukiwać odpowiadające im słowa.
 
