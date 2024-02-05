@@ -1,5 +1,6 @@
 import json
 from prefix_tree import PrefixTree
+from linked_list import LinkedList
 
 
 def load_words(filepath):
@@ -29,29 +30,26 @@ class DictionaryT9:
     def find_words_by_prefix(self, prefix):
         return self.words_store.search(prefix)
 
-    def search_words_by_numbers(self, numbers):
-        # search from the root of the PrefixTree
-        current = self.words_store.root
+    def search_words_by_numbers(self, numbers, length, prefix, result=None):
+        if result is None:
+            result = []
 
-        found_words = []
+        if length == 0:
+            for word in self.find_words_by_prefix(prefix):
+                result.append(word)
+            return result
 
-        def search(node, num_index, word):
-            if node.is_end and num_index == len(numbers):
-                found_words.append(word)
-                return
-            if num_index >= len(numbers):
-                return
+        letters = self.nums_to_letters.get(numbers[0], "")
 
-            for child in node.children:
-                if child and child.number == numbers[num_index]:
-                    search(child, num_index + 1, word + child.value)
+        for letter in letters:
+            new_prefix = prefix + letter
+            self.search_words_by_numbers(numbers[1:], length - 1, new_prefix, result)
 
-        search(current, 0, "")
-        return found_words
+        return result
 
     def get_words(self, numbers):
-        suggestions = []
-        results = self.search_words_by_numbers(numbers)
+        wordstore = []
+        results = self.search_words_by_numbers(numbers, len(numbers), "")
 
         # Sort the results based on word length
         sorted_results = sorted(results, key=len)
@@ -60,9 +58,9 @@ class DictionaryT9:
         starting_length = len(numbers)
         for word in sorted_results:
             if len(word) >= starting_length:
-                suggestions.append(word)
+                wordstore.append(word)
 
-        return suggestions
+        return wordstore
 
 
 def display_phone_keypad():
@@ -127,5 +125,3 @@ if __name__ == '__main__':
     file_path = './words.txt'
     dictionary_t9 = DictionaryT9(file_path)
     t9_text_interface(dictionary_t9)
-
-

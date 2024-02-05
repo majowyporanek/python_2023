@@ -1,13 +1,13 @@
 class Node:
     def __init__(self, value, number=None):
         self.value = value
-        self.number = number  # New field to store the corresponding T9 number
+        self.number = number  # field to store matching T9 number
         self.children = [None] * 26
         self.is_end = False
 
 
 class PrefixTree:
-    """Klasa reprezentująca Prefix Tree."""
+    """Class representing Prefix Tree."""
 
     def __init__(self):
         self.root = Node('\0')
