@@ -1,7 +1,7 @@
 # Słownik T9 - Program Konsolowy
 
 ## Opis Projektu
-Program konsolowy wykorzystujący słownik T9 do wyszukiwania wyrazów. Umożliwia użytkownikowi wprowadzenie sekwencji cyfr, a następnie przeszukuje i wyświetla pasujące słowa zgodnie z logiką klawiatury T9.
+Program konsolowy wykorzystujący słownik T9 do wyszukiwania wyrazów w języku angielskim. Umożliwia użytkownikowi wprowadzenie sekwencji cyfr, a następnie przeszukuje i wyświetla pasujące słowa zgodnie z logiką klawiatury T9.
 
 ## Składniki Projektu
 
