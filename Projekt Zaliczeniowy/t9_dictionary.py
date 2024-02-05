@@ -2,7 +2,7 @@ import json
 from prefix_tree import PrefixTree
 
 
-def load_words_from_json(filepath):
+def load_words(filepath):
     with open(filepath, 'r') as file:
         data = json.load(file)
         return data['words']
