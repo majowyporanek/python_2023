@@ -39,8 +39,8 @@ Reprezentuje drzewo prefiksowe używane do przechowywania i wyszukiwania słów.
 ### Moduł: `t9_dictionary.py`
 
 #### Funkcja: `load_words_from_json(filepath)`
-Ładuje słowa z pliku JSON.
-- `filepath`: Ścieżka do pliku JSON z słowami.
+Ładuje słowa z pliku.
+- `filepath`: Ścieżka do ze słowami. Plik użyty w projekcie: [słowa](https://www.mit.edu/~ecprice/wordlist.10000)
 
 #### Klasa: `DictionaryT9`
 Zarządza słownikiem T9.
