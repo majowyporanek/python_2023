@@ -94,27 +94,27 @@ docelowy zwrot: "hello world"
    - Po uruchomieniu skryptu, zobaczysz interfejs konsolowy.
    - Postępuj zgodnie z instrukcjami na ekranie, aby wprowadzać sekwencje cyfr i wyszukiwać odpowiadające im słowa.
 
-##Testy Jednostkowe
+## Testy Jednostkowe
 
 Projekt zawiera testy jednostkowe, które mają na celu zapewnienie poprawności działania kluczowych komponentów aplikacji. Testy jednostkowe są skoncentrowane na weryfikacji funkcjonalności klas PrefixTree i DictionaryT9, a także sprawdzają poprawność operacji wyszukiwania słów i zarządzania drzewem prefiksowym.
 
-###Składniki Testów Jednostkowych
-####prefix_tree_test.py:
+### Składniki Testów Jednostkowych
+#### prefix_tree_test.py:
 Testuje działanie klasy PrefixTree, w tym wstawianie słów, wyszukiwanie prefiksów i czyszczenie drzewa.
-####t9_dictionary_test.py:
+#### t9_dictionary_test.py:
 Testuje funkcjonalność klasy DictionaryT9, w tym ładowanie słów, wyszukiwanie słów na podstawie prefiksów i numerów T9.
 Wykonywanie Testów
 Aby uruchomić testy jednostkowe, wykonaj następujące kroki:
 
 Przygotowanie: Upewnij się, że masz zainstalowane wymagane zależności.
 
-####Uruchomienie Testów:
+#### Uruchomienie Testów:
 
 1. Otwórz terminal lub wiersz poleceń w katalogu projektu.
 2. Uruchom testy dla PrefixTree, wpisując python -m unittest test_prefix_tree.
 3. Uruchom testy dla DictionaryT9, wpisując python -m unittest test_t9_dictionary.
 
-####Przykładowy Test
+#### Przykładowy Test
 Oto przykład testu jednostkowego dla metody find_words_by_prefix w klasie DictionaryT9:
 
 def test_find_words_by_prefix(self):
