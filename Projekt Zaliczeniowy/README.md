@@ -120,9 +120,9 @@ Oto przykład testu jednostkowego dla metody find_words_by_prefix w klasie Dicti
 ```python
 def test_find_words_by_prefix(self):
     self.assertEqual(sorted(self.dictionary_t9.find_words_by_prefix('ap')), sorted(['apple', 'apply', 'applet']))
-
-Ten test sprawdza, czy metoda find_words_by_prefix poprawnie zwraca listę słów zaczynających się od danego prefiksu.
 ```
+Test sprawdza, czy metoda find_words_by_prefix poprawnie zwraca listę słów zaczynających się od danego prefiksu.
+
 
 ## Technologie
    - Python
