@@ -117,6 +117,7 @@ Przygotowanie: Upewnij się, że masz zainstalowane wymagane zależności.
 #### Przykładowy Test
 Oto przykład testu jednostkowego dla metody find_words_by_prefix w klasie DictionaryT9:
 
+```python
 def test_find_words_by_prefix(self):
     self.assertEqual(sorted(self.dictionary_t9.find_words_by_prefix('ap')), sorted(['apple', 'apply', 'applet']))
 
