@@ -68,7 +68,7 @@ Interfejs tekstowy dla słownika T9.
 - `dictionary`: Instancja słownika T9.
 
 ## Przykład użycia programu
-docelowy zwrot: "hello world" 
+przykład nr. 1: docelowy zwrot: "hello world" 
 1. Użytkownik jest proszony o wpisanie wybranej sekwencji cyfr
    ![1](https://github.com/majowyporanek/python_2023/assets/80955254/98b436d6-2e02-4436-9955-c83b1cb07d64)
 2. Użytkownik widzi pierwszą sugestię na podstawie wpisanego znaku. Aby zobaczyć kolejne sugestie wciska "Enter". Jeżeli sugestia jest trafna - wpisuje "ok". Jeśli chce wpisać nową sekwencje cyfr wpisuje "new".
@@ -79,6 +79,14 @@ docelowy zwrot: "hello world"
    ![3](https://github.com/majowyporanek/python_2023/assets/80955254/de16f97a-a23c-4292-9563-32ad98376916)
 5. Użytkownik akceptuje sugestię "world" a następnie wpisuje "exit" w celu zakończenia działania programu.
    ![4](https://github.com/majowyporanek/python_2023/assets/80955254/999fd34c-6819-4078-bcd7-2ba6ff292cc7)
+
+przykład nr. 2: docelowy zwrot: "experiance" (literówka w wyrazie, poprawnie - "experience")
+
+1. Użytkownik jest proszony o wpisanie wybranej sekwencji cyfr
+   ![image](https://github.com/majowyporanek/python_2023/assets/80955254/18368a58-112c-4a18-aedb-a8b1813aa9b6)
+2. Użytkownik wpisuje wybraną sekwencję. Okazuję się, że nie ma takiego słowa w słowniku. Użytkownik widzi informację "No words found for this sequence.". Ma możliwość wpisania nowej sekwencji lub wyjścia z programu poprzez 'exit'.
+   ![image](https://github.com/majowyporanek/python_2023/assets/80955254/6c6f1855-8e8b-44e5-8452-34681eef84f3)
+
 
 ## Instrukcje Uruchomienia
 1. Upewnij się, że masz zainstalowanego Pythona.
@@ -126,4 +134,8 @@ Test sprawdza, czy metoda find_words_by_prefix poprawnie zwraca listę słów za
 
 ## Technologie
    - Python
+
+## Źródła
+   - [baeldung - tries](https://www.baeldung.com/cs/tries-prefix-trees)
+   - [wikipedia - słownik T9](https://pl.wikipedia.org/wiki/S%C5%82ownik_T9)
 
